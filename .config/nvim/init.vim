@@ -41,6 +41,9 @@ Plug 'jackguo380/vim-lsp-cxx-highlight'
 " Syntastic
 Plug 'vim-syntastic/syntastic'
 
+" Glow Markdown Preview
+Plug 'ellisonleao/glow.nvim'
+
 call plug#end()
 
 colorscheme catppuccin
