@@ -65,22 +65,22 @@ nmap <C-n> :NERDTreeToggle<CR>
 " Ignore Node Modules folder in nerdtree
 let g:NERDTreeIgnore = ['^node_modules$']
 
-" Call NerdTreeFind if NERDTree is active, current window contains a
-" modifiable file, and we're not in a vimdiff
-"function! SyncTree()
-"  if &modifiable && IsNERDTreeOpen() && strlen(expand('%')) > 0 && !&diff
-"    NERDTreeFind
-"    wincmd p
-"  endif
-"endfunction
-
-" Highlight currently open buffer in NERDTree
-" autocmd BufEnter * call SyncTree()
-
 " Sync Open File with NERDTree
 function! IsNERDTreeOpen()
-  return exists("t:NERDTREEBufName") && (bufwinnrt:NERDTreeBufName) != -1)
+  return exists("t:NERDTREEBufName") && (bufwinnr(t:NERDTreeBufName) != -1)
 endfunction
+
+" Call NerdTreeFind if NERDTree is active, current window contains a
+" modifiable file, and we're not in a vimdiff
+function! SyncTree()
+ if &modifiable && IsNERDTreeOpen() && strlen(expand('%')) > 0 && !&diff
+   NERDTreeFind
+   wincmd p
+ endif
+endfunction
+
+" Highlight currently open buffer in NERDTree
+autocmd BufEnter * call SyncTree()
 
 " Tab to complete and navigate
 inoremap <silent><expr> <TAB>
