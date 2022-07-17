@@ -35,6 +35,9 @@ Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'saadparwaiz1/cmp_luasnip'
 Plug 'L3MON4D3/LuaSnip'
 
+-- Auto braces
+Plug 'jiangmiao/auto-pairs'
+
 vim.call('plug#end')
 
 vim.api.nvim_exec("colorscheme catppuccin",false)
