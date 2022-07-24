@@ -80,6 +80,7 @@ bindsym $mod+Shift+q kill
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop 
 
+
 # exit-menu
 # bindsym $mod+shift+e exec rofi -show power-menu -modi power-menu:rofi-power-menu
 
@@ -210,8 +211,7 @@ bindsym $mod+r mode "resize"
 focus_follows_mouse no
 
 # Picom
-exec_always --no-startup-id killall picom && picom -b --config ~/.config/picom/picom.conf
-exec_always --no-startup-id picom -b --config ~/.config/picom/picom.conf
+# exec_always --no-startup-id killall picom && picom -b --config ~/.config/picom/picom.conf
 
 ########################################
 # AUTOSTART                            #
@@ -226,10 +226,12 @@ exec_always --no-startup-id polybar --config=~/.config/polybar/customconfig.ini 
 exec_always --no-startup-id polybar --config=~/.config/polybar/config.ini top
 
 # Dunst 
-exec --no-startup-id dbus-launch dunst --consfig ~/.config/dunst/dunstrc
+exec --no-startup-id dbus-launch dunst --config ~/.config/dunst/dunstrc
 
 # autotiler
 exec_always --no-startup-id autotiling
+
+exec xinput set-prop 8 155 0.2 0 0 0 0.2 0 0 0 1
 
 #####
 #floating apps
