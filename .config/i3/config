@@ -210,8 +210,9 @@ bindsym $mod+r mode "resize"
 # Disable mouse focus
 focus_follows_mouse no
 
+
 # Picom
-# exec_always --no-startup-id killall picom && picom -b --config ~/.config/picom/picom.conf
+exec_always --no-startup-id picom -b --config ~/.config/picom/picom.conf
 
 ########################################
 # AUTOSTART                            #
