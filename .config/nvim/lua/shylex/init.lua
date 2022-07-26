@@ -4,7 +4,7 @@ vim.g.mapleader = ","
 
 local Plug = vim.fn['plug#']
 
-vim.call('plug#begin')
+vim.call('plug#begin', '~/.config/nvim/plugged')
 
 -- Catppucin Theme
 Plug('catppuccin/nvim', {as = 'catppuccin'})
@@ -43,18 +43,15 @@ Plug 'jiangmiao/auto-pairs'
 
 vim.call('plug#end')
 
-vim.api.nvim_exec("colorscheme catppuccin",false)
+require("shylex.colors")
 
-vim.api.nvim_exec("filetype plugin indent on", false)
-vim.opt.tabstop = 2
-vim.api.nvim_exec("set noexpandtab", false)
-vim.api.nvim_exec("set softtabstop=2", false)
-vim.api.nvim_exec("set shiftwidth=2", false)
-vim.api.nvim_exec("set number", false)
+require("shylex.remap")
 
-vim.api.nvim_set_var('g:python3_host_prog', "/usr/bin/python3/")
+require("shylex.set")
 
-vim.api.nvim_set_var('g:rainbow_active', 1)
+vim.api.nvim_set_var('python3_host_prog', "/usr/bin/python3/")
+
+vim.api.nvim_set_var('rainbow_active', 1)
 
 -- CTRL+n for Nerd Tree
 vim.api.nvim_set_keymap(
