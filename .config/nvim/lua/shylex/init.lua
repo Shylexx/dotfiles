@@ -38,10 +38,17 @@ Plug 'simrat39/rust-tools.nvim'
 
 Plug 'mfussenegger/nvim-dap'
 
--- Auto braces
-Plug 'jiangmiao/auto-pairs'
+-- Treesitter
+Plug('nvim-treesitter/nvim-treesitter', {['do']= 'TSUpdate'})
+
+-- Neogit
+Plug 'TimUntersberger/neogit'
 
 vim.call('plug#end')
+
+require("shylex.treesitter")
+
+require("shylex.neogit")
 
 require("shylex.colors")
 
