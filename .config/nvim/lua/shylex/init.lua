@@ -44,6 +44,9 @@ Plug('nvim-treesitter/nvim-treesitter', {['do']= 'TSUpdate'})
 -- Neogit
 Plug 'TimUntersberger/neogit'
 
+-- FM Nvim
+Plug 'is0n/fm-nvim'
+
 vim.call('plug#end')
 
 require("shylex.treesitter")
@@ -55,6 +58,8 @@ require("shylex.colors")
 require("shylex.remap")
 
 require("shylex.set")
+
+require("shylex.fmnvim")
 
 vim.api.nvim_set_var('python3_host_prog', "/usr/bin/python3/")
 
