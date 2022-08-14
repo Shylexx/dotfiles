@@ -48,6 +48,10 @@ require('lspconfig')['clangd'].setup{
 	on_attach = on_attach,
 	flags = lsp_flags,
 }
+require('lspconfig')['hls'].setup{
+  on_attach = on_attach,
+  flags = lsp_flags,
+}
 
 
 -- nvim_lsp object
@@ -68,7 +72,8 @@ local opts = {
     },
 
     -- all the opts to send to nvim-lspconfig
-    -- these override the defaults set by rust-tools.nvim
+    -- these override the de
+    -- require('lspconfig')[haskel:faults set by rust-tools.nvim
     -- see https://github.com/neovim/nvim-lspconfig/blob/master/CONFIG.md#rust_analyzer
     server = {
         -- on_attach is a callback called when the language server attachs to the buffer

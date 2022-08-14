@@ -122,3 +122,7 @@ export NVM_DIR="$HOME/.nvm"
 alias config='/usr/bin/git --git-dir=/home/alexd/.cfg/ --work-tree=/home/alexd'
 export PATH=$PATH:/home/alexd/.spicetify
 alias config='/usr/bin/git --git-dir=/home/alexd/.cfg/ --work-tree=/home/alexd'
+
+export EDITOR="nvim"
+
+[ -f "/home/alexd/.ghcup/env" ] && source "/home/alexd/.ghcup/env" # ghcup-env

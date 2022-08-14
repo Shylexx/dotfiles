@@ -277,3 +277,5 @@ bindsym $mod+shift+e exec "rofi -show power-menu -modi power-menu:~/.config/rofi
 
 # bindsym F10 exec rofi -show window \
 #		-config ~/.config/rofi/rofidmenu.rasi
+
+bindsym Print exec teiler
