@@ -21,8 +21,7 @@ This repo includes configs for the following:
   
 Additional info:  
 - I use feh to set my wallpaper (which is from the [catppuccin wallpaper repo](https://www.github.com/Catppuccin/Wallpapers))  
-- If you are using the Neovim config, Install Vim-Plug and then run :PlugInstall to install the plugins, custom hotkeys are pretty common but also mostly explained in comments in the file.  
-- To make C/CPP work fully in neovim, install llvm and clang  
+- If you are using the Neovim config, Install Vim-Plug and then run :PlugInstall to install the plugins
 - Install Oh-My-Zsh and Powerline10k to use my shell  
 - The polybar-scripts folder contains a script to get the current song on spotify  
   
