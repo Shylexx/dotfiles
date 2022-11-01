@@ -214,6 +214,8 @@ focus_follows_mouse no
 # Picom
 exec_always --no-startup-id picom -b --config ~/.config/picom/picom.conf
 
+exec xset s off -dpms
+
 ########################################
 # AUTOSTART                            #
 ########################################
@@ -223,8 +225,11 @@ exec_always --no-startup-id picom -b --config ~/.config/picom/picom.conf
 exec sh ~/.fehbg & --no-startup-id
 
 # Polybar
-exec_always --no-startup-id polybar --config=~/.config/polybar/customconfig.ini example
-exec_always --no-startup-id polybar --config=~/.config/polybar/config.ini top
+# exec_always --no-startup-id polybar --config=~/.config/polybar/customconfig.ini example
+# exec_always --no-startup-id polybar --config=~/.config/polybar/config.ini top
+
+# Polybar script
+exec_always --no-startup-id ~/polybarlaunch.sh
 
 # Dunst 
 exec --no-startup-id dbus-launch dunst --config ~/.config/dunst/dunstrc
@@ -232,8 +237,7 @@ exec --no-startup-id dbus-launch dunst --config ~/.config/dunst/dunstrc
 # autotiler
 exec_always --no-startup-id autotiling
 
-exec xinput set-prop 8 155 0.3 0 0 0 0.3 0 0 0 1
-exec xinput set-prop 11 155 0.3 0 0 0 0.3 0 0 0 1
+exec_always sh ~/mousesens.sh
 
 #####
 #floating apps
