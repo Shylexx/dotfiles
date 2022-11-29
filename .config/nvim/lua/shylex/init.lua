@@ -19,14 +19,14 @@ Plug 'ap/vim-css-color'
 Plug 'frazrepo/vim-rainbow'
 
 -- Icons
-Plug 'ryanoasis/vim-devicons'
-
--- Nerdtree Files
-Plug 'scrooloose/nerdtree'
+Plug 'nvim-tree/nvim-web-devicons'
 
 --Telescope Fuzzy Finder
 Plug 'nvim-lua/plenary.nvim'
 Plug('nvim-telescope/telescope.nvim', {tag= "0.1.0"})
+
+-- Native fuzzy finder for telescope
+Plug('nvim-telescope/telescope-fzf-native.nvim', { ['do']= 'make' })
 
 -- Neovim LSP
 Plug 'neovim/nvim-lspconfig'
