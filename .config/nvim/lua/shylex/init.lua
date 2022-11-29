@@ -65,38 +65,6 @@ vim.api.nvim_set_var('python3_host_prog', "/usr/bin/python3/")
 
 vim.api.nvim_set_var('rainbow_active', 1)
 
--- CTRL+n for Nerd Tree
-vim.api.nvim_set_keymap(
-	"n",
-	"<C-n>",
-	":NERDTreeToggle<cr>",
-	{noremap = false}
-	)
-vim.api.nvim_set_var('g:NERDTreeIgnore', {key1='["^node_modules$"]'})
-
-vim.api.nvim_exec(
-[[
-function! IsNERDTreeOpen()
-	return exists("t:NERDTREEBufName") && (bufwinnr(t:NERDTreeBufName) != -1)
-endfunction
-]],
-false)
-
--- Sync Open File with NERDTree
-vim.api.nvim_exec(
-[[
-function! SyncTree()
-	if &modifiable && IsNERDTreeOpen() && strlen(expand('%')) > 0 && !&diff
-			NERDTreeFind
-			wincmd p
-	endif
-endfunction
-]],
-false)
-
--- Highlight Current Buffer in NERDTree
-vim.api.nvim_exec("autocmd BufEnter * call SyncTree()", false)
-
 -- Tall Command Area
 vim.opt.cmdheight = 2
 
@@ -104,9 +72,12 @@ vim.opt.cmdheight = 2
 vim.opt.updatetime = 300
 
 vim.api.nvim_exec("set shortmess+=c",false)
+
 -- Discord Rich Presence
 vim.api.nvim_set_var('g:presence_auto_update', {key1=1})
-vim.api.nvim_set_var('g:presence_neovim_image_text', {key1="NeoVim Text Editor"})
+vim.api.nvim_set_var('g:presence_neovim_image_text', {key1="NeoVim Editor"})
 
 require('shylex.nvimlsp')
 require('shylex.autocomplete')
+
+require('shylex.telescope')
