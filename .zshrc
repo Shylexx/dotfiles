@@ -119,10 +119,9 @@ export PATH=/home/alexd/.local/bin:$PATH
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-alias config='/usr/bin/git --git-dir=/home/alexd/.cfg/ --work-tree=/home/alexd'
 export PATH=$PATH:/home/alexd/.spicetify
 alias config='/usr/bin/git --git-dir=/home/alexd/.cfg/ --work-tree=/home/alexd'
 
 export EDITOR="nvim"
 
-[ -f "/home/alexd/.ghcup/env" ] && source "/home/alexd/.ghcup/env" # ghcup-env
+export LLVM_SYS_120_PREFIX=$HOME/local
