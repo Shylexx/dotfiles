@@ -124,4 +124,4 @@ alias config='/usr/bin/git --git-dir=/home/alexd/.cfg/ --work-tree=/home/alexd'
 
 export EDITOR="nvim"
 
-export LLVM_SYS_120_PREFIX=$HOME/local
+export PATH=$PATH:/usr/bin/openssl
