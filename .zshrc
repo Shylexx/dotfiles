@@ -125,3 +125,6 @@ alias config='/usr/bin/git --git-dir=/home/alexd/.cfg/ --work-tree=/home/alexd'
 export EDITOR="nvim"
 
 export PATH=$PATH:/usr/bin/openssl
+
+# Syntax Highlighting!
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
