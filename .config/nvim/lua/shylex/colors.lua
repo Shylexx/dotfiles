@@ -27,6 +27,9 @@ require("catppuccin").setup({
 		operators = {},
 	},
 	integrations = {
+		mason = true,
+		harpoon = true,
+		fidget = true,
 		treesitter = true,
 		native_lsp = {
 			enabled = true,
@@ -51,27 +54,19 @@ require("catppuccin").setup({
 		gitsigns = true,
 		leap = false,
 		telescope = true,
-		nvimtree = {
-			enabled = true,
-			show_root = true,
-			transparent_panel = false,
-		},
-		neotree = {
-			enabled = false,
-			show_root = true,
-			transparent_panel = false,
-		},
+		nvimtree = false,
 		dap = {
-			enabled = false,
-			enable_ui = false,
+			enabled = true,
+			enable_ui = true,
 		},
+		neotree = false,
 		which_key = false,
 		indent_blankline = {
 			enabled = true,
 			colored_indent_levels = false,
 		},
 		dashboard = true,
-		neogit = true,
+		neogit = false,
 		vim_sneak = false,
 		fern = false,
 		barbar = false,
